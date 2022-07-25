@@ -1,11 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Sidenav Initialisation
+document.addEventListener('DOMContentLoaded', function () {
     let sidenav = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(sidenav);
-  });
+    let modals = document.querySelectorAll('.modal');
+    let datepicker = document.querySelectorAll('.datepicker');
+    let selects = document.querySelectorAll('select');
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Modal Initialisation
-  let modals = document.querySelectorAll('.modal');
-  M.Modal.init(modals);
+    M.Sidenav.init(sidenav);
+    M.Modal.init(modals);
+    M.Datepicker.init(datepicker, {
+        format: "dd mmmm, yyyy",
+        i18n: {
+            done: "Select"
+        }
+    });
+    M.FormSelect.init(selects);
 });
