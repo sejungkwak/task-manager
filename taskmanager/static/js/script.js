@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let modals = document.querySelectorAll('.modal');
     let datepicker = document.querySelectorAll('.datepicker');
     let selects = document.querySelectorAll('select');
+    let collapsible = document.querySelectorAll('.collapsible');
 
     M.Sidenav.init(sidenav);
     M.Modal.init(modals);
@@ -13,4 +14,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     M.FormSelect.init(selects);
+    M.Collapsible.init(collapsible);
 });
